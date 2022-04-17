@@ -26,6 +26,7 @@ st.plotly_chart(
         x='sepal_length',
         # y='sepal_width',
         text_auto=True,
+        nbins=30,
         color='species'
     ), use_container_width=True
 )
@@ -36,6 +37,7 @@ st.plotly_chart(
         x='sepal_length',
         # y='sepal_width',
         text_auto=True,
+        nbins=30,
         color='species',
         cumulative=True
     ), use_container_width=True
