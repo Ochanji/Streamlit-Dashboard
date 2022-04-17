@@ -42,7 +42,22 @@ st.plotly_chart(
         cumulative=True
     ), use_container_width=True
 )
+col1, col2 = st.columns(2)
+with col1:
+    st.plotly_chart(
+        px.pie(
+            data_frame=df,
+            names='species'
+        ), use_container_width=True
+    )
 
+with col2:
+    st.plotly_chart(
+        px.pie(
+            data_frame=df,
+            names='species'
+        ), use_container_width=True
+    )    
 st.table(
     df.describe()
 )
