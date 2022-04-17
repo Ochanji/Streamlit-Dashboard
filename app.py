@@ -57,7 +57,14 @@ with col2:
             data_frame=df,
             names='species'
         ), use_container_width=True
-    )    
+    )
+
+st.table(
+    pd.crosstab(
+        index=df['species'],
+        columns=df['sepal_length'].sum()
+    )
+)    
 st.table(
     df.describe()
 )
